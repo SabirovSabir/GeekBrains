@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+
+
+
+{% block page_title %}
+Продукты
+{% endblock %}
+
+{% block page_content %}
+
+<ul>
+{% for itm in products %}
+    <li>
+        <a href="/products/{{ forloop.counter0 }}">{{ itm }}</a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
